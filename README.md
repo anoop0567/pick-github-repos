@@ -13,6 +13,23 @@ An angular app which uses github api to get basic user details and have an optio
 * Option of pick repo with username, star_count, fork_count and language
 * Can remove the repo from picked repositories
 
+## Getting started
+
+**Warning**
+
+> Verify that you are running at least node 8.9.x and npm 5.x.x by running node -v and npm -v in a terminal/console window. Older versions may produce errors.
+
+1. Go to project folder and install dependencies.
+ ```bash
+ npm install --save
+ ```
+
+2. Launch development server:
+ ```bash
+ npm start
+ ```
+3. Go to http://localhost:4200 in your browser
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
