@@ -10,7 +10,7 @@
       </label>
       <br>
       <input type="text" autofocus class="form-control" [(ngModel)]='userName' (keyup.enter)='getRepos()' placeholder="Enter Github Username...."><br>
-      <input type="submit" value="Search" class="btn btn-success" (click)='getRepos()'>
+      <input type="submit" value="Search" class="btn btn-success" (click)='getRepos()' [disabled]="isClicked">
 
       <br>
       <br>
@@ -19,6 +19,10 @@
         <div class="row">
           <div class="col">
             <h4>Picked Repositories Bucket</h4>
+            <div *ngIf='reposData.length > 0;' class="mb-3">
+                <button class="btn btn-dark mr-2" (click)="shortAsc()">Sort Asc <i class="fas fa-arrow-up"></i></button>
+                <button class="btn btn-dark" (click)="shortDsc()">Sort Des <i class="fas fa-arrow-down"></i></button>
+            </div>
             <ul class="list-group" *ngIf='reposData.length > 0; else empty'>
               <li *ngFor="let repo of reposData;  let i = index" class="list-group-item">
                 <div class="contanier-fluid">
